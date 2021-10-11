@@ -15,17 +15,34 @@
             android:scaleType="centerCrop"/>
 
         <LinearLayout
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="8,000"
                 android:textSize="25sp"
                 android:textColor="#FFA509"
                 android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="마포구 서교동,1층"/>
+
+            <TextView
+                android:textColor="#929B94"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방 설명 작성란"/>
 
 
 
