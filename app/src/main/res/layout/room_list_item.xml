@@ -22,6 +22,7 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/priceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8,000"
@@ -30,6 +31,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/addressAndFloorTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -38,8 +40,9 @@
                 android:text="마포구 서교동,1층"/>
 
             <TextView
+                android:id="@+id/descriptionTextView"
                 android:textColor="#929B94"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="방 설명 작성란"/>

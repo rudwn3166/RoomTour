@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.example.roomtour.R
 import com.example.roomtour.datas.RoomClass
 
@@ -25,7 +26,20 @@ class RoomAdapter(val mContext: Context,
 
         }
 
-        var row = null!!
+        var row = temprow!!
+
+        val roomData = mList[position]
+
+        val priceTextView = row.findViewById<TextView>(R.id.priceTextView)
+        val addressAndFloorTextView =row.findViewById<TextView>(R.id.addressAndFloorTextView)
+        val descriptionTextView = row.findViewById<TextView>(R.id.descriptionTextView)
+
+        addressAndFloorTextView.text="${roomData.address},${roomData.getFomattedFloor()}"
+        descriptionTextView.text=roomData.description
+        priceTextView.text="${roomData.getFomattedPrice()}"
+
+
+
 
         return row
 
