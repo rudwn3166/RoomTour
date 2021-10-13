@@ -1,5 +1,6 @@
 package com.example.roomtour
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -28,6 +29,23 @@ class MainActivity : AppCompatActivity() {
 
         mAdapter =RoomAdapter(this,R.layout.room_list_item,mRoomList)
         main_list.adapter =mAdapter
+
+        main_list.setOnItemClickListener { adapterView, view, position, id ->
+
+            val clicked =mRoomList[position]
+//            인텐트 사용시 액티비티는 대소문자 구별해서 적어주자 파일명 그대로 적용됨
+            val myIntent = Intent(this, ViewRoomDetailActivity::class.java)
+
+            myIntent.putExtra("room",clicked)
+
+
+            startActivity(myIntent)
+
+
+
+
+        }
+
 
     }
 }
